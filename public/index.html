@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>🧻 Toilet Monkey Chat 🧻</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Concert+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Honk&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+                            /* ------------ YOUR CSS ------------ */
+      
+      
+      *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+  /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+}
+
+#happytext {
+  animation:glow 10s ease-in-out infinite;
+  
+  
+
+/* For less laggy effect, uncomment this:
+  
+  animation:none;
+  -webkit-text-stroke:1px #fff; 
+  
+=========== */
+  
+}
+
+
+
+figure { box-sizing:border-box; }
+
+
+
+figure {
+  animation:wobble 5s ease-in-out infinite;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%,100%{ transform:rotate3d(0.5,0.5,0,10deg); }
+  25%{ transform:rotate3d(-0.5,0.5,0,10deg); }
+  50%{ transform:rotate3d(-0.5,-0.5,0,10deg); }
+  75%{ transform:rotate3d(0.5,-0.5,0,10deg); }
+}
+
+#happytext {
+  font:900 1.8em 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+#happytext:nth-child(2){ transform:translateZ(5px); }
+#happytext:nth-child(3){ transform:translateZ(10px);}
+#happytext:nth-child(4){ transform:translateZ(15px); }
+#happytext:nth-child(5){ transform:translateZ(20px); }
+#happytext:nth-child(6){ transform:translateZ(25px); }
+#happytext:nth-child(7){ transform:translateZ(30px); }
+#happytext:nth-child(8){ transform:translateZ(35px); }
+#happytext:nth-child(9){ transform:translateZ(40px); }
+#happytext:nth-child(10){ transform:translateZ(45px); }
+
+
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, 'Bungee Spice', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: 1;
+  color: var(--color-primary);
+  -webkit-animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+          animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@-webkit-keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+@-webkit-keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+      
+      
+.wow {
+  animation: glitch 3s steps(100) infinite;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+@keyframes glitch { 
+  0% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  1% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  2% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  3% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  4% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  5% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  6% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  7% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  8% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  9% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  10% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  11% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  12% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  13% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  14% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  15% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  16% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  17% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  18% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  19% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  20% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  21% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  22% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  23% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  24% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  25% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  26% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0.5px);}
+  27% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0.5px);}
+  28% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  29% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  30% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  31% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  32% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  33% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  34% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  35% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0.5px);}
+  36% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0.5px);}
+  37% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0.5px);}
+  38% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  39% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  40% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  41% { text-shadow: 45px 0 0 #0c33f5, -45px 0 0 lime; filter: blur(0);}
+  42% { text-shadow: 0 0 0 #0c33f5, 0 0 0 lime; filter: blur(0);}
+  43% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  44% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  45% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  46% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  47% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0.5px);}
+  48% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  49% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  50% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  51% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  52% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  53% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  54% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  55% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0.5px);}
+  56% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0.5px);}
+  57% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0.5px);}
+  58% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  59% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  60% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  61% { text-shadow: 30px 0 0 red, -30px 0 0 lime; filter: blur(0);}
+  62% { text-shadow: 0 0 0 red, 0 0 0 lime; filter: blur(0);}
+  63% { text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5; filter: blur(0);}
+  64% { text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5; filter: blur(0);}
+  65% { text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5; filter: blur(0);}
+  66% { text-shadow: 1px 0 0 red, -1px 0 0 #0c33f5; filter: blur(0.5px);}
+  67% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0.5px);}
+  68% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  69% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  70% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  71% { text-shadow: 50px 0 0 red, -50px 0 0 #0c33f5; filter: blur(0);}
+  72% { text-shadow: 0 0 0 red, 0 0 0 #0c33f5; filter: blur(0);}
+  73% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  74% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  75% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  76% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5; filter: blur(0);}
+  77% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  78% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  79% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  80% { text-shadow: -3px 0 0 red, 3px 0 0 #0c33f5; filter: blur(0);}
+  81% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  82% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0);}
+  83% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  84% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  85% { text-shadow: 1px 0 0 red, -1px 0 0 lime; filter: blur(0.5px);}
+  86% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0.5px);}
+  87% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0.5px);}
+  88% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  89% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  90% { text-shadow: -3px 0 0 red, 3px 0 0 lime; filter: blur(0);}
+  91% { text-shadow: 60px 0 0 lime, -60px 0 0 #0c33f5; filter: blur(0);}
+  92% { text-shadow: 0 0 0 lime, 0 0 0 #0c33f5; filter: blur(0);}
+  92% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  93% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  94% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  95% { text-shadow: 0.8px 0 0 #0c33f5, -0.8px 0 0 lime; filter: blur(0);}
+  96% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  97% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  98% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  99% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);}
+  100% { text-shadow: -3px 0 0 #0c33f5, 3px 0 0 lime; filter: blur(0);} }
+
+      
+                            .bungee {
+                              font-family: 'Bungee Spice', cursive;
+                              font-weight: normal;
+                                      animation: hueRotate 2.5s infinite;
+                            }
+
+                                html, body { display: grid }
+                                html { height: 100% }
+                                body { background: #222 }
+
+                            .cool{
+                              color: transparent;
+                                font: 900 clamp(2em, 10vw, 10em) exo, sans-serif;
+                                animation: shimmer 2s linear infinite
+                              -webkit-background-clip: text;
+                              background-clip: text;
+                              place-self: center;
+                              background: linear-gradient(90deg, #00f, #0ff, #00f) -100%/ 200%;
+                              }
+
+                              @keyframes shimmer { to { background-position: 100% } }
+
+                            .cool-strike {
+                              font-family: 'Press Start 2P', cursive;
+                              display: inline-block;
+                              position: relative;
+                              color: #fff;
+                              animation: hueRotate 3s infinite linear, wave 1.5s infinite ease-in-out;
+                              text-decoration: underline;
+                              text-shadow:
+                                0 0 3px red,
+                                0 0 6px blue,
+                                0 0 10px magenta;
+                              transform-style: preserve-3d;
+                              transform: rotateX(0deg);
+                            }
+
+                            @keyframes hueRotate {
+                              0% { filter: hue-rotate(0deg); }
+                              100% { filter: hue-rotate(360deg); }
+                            }
+
+                            @keyframes wave {
+                              0%, 100% { transform: rotateX(0deg); }
+                              50% { transform: rotateX(180deg); }
+                            }
+
+                            .spoiler {
+                              background-color: #444;
+                              color: transparent;
+                              border-radius: 4px;
+                              padding: 0 4px;
+                              cursor: pointer;
+                              user-select: none;
+                            }
+
+
+                            .good {
+                              font-family: "Honk", 'Lobster', cursive;
+                              font-optical-sizing: auto;
+                              font-weight: 400;
+                              font-size: 150%;
+                              font-style: normal;
+                              font-variation-settings:
+                                "MORF" 15,
+                                "SHLN" 50;
+                            }
+
+                            .good {
+                              color: #0f0;
+                              text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0, 0 0 50px #0f0, 0 0 75px #0f0;
+                              animation: flicker 1.5s infinite alternate;
+                            }
+                            @keyframes flicker{
+                              0% { opacity: 1; }
+                              100% { opacity: 0; }
+                            }
+                            .spoiler.revealed {
+                              color: #fff;
+                            }
+
+                            #toast {
+                              position: fixed;
+                              bottom: 30px;
+                              left: 50%;
+                              transform: translateX(-50%);
+                              background: #333;
+                              color: #fff;
+                              padding: 12px 24px;
+                              border-radius: 8px;
+                              font-size: 0.95em;
+                              opacity: 0;
+                              transition: opacity 0.4s ease, bottom 0.4s ease;
+                              z-index: 9999;
+                              pointer-events: none;
+                              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                            }
+                            #toast.show {
+                              opacity: 1;
+                              bottom: 50px;
+                            }
+                            @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+                .good-looking{
+                  padding-left: 15px;
+                  font-family: 'Fredoka One', cursive;
+                  font-size: 1.5em;
+                  color: #fff;
+                  text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 15px #fff,
+                    0 0 20px #0ff,
+                    0 0 35px #0ff,
+                    0 0 40px #0ff,
+                    0 0 50px #0ff,
+                    0 0 75px #0ff;
+                  animation: pulse 1.5s infinite alternate
+                }
+
+                      @keyframes pulse {
+                        0% {
+                          text-shadow:
+                            0 0 5px #cc5,
+                            0 0 10px #cc5,
+                            0 0 15px #cc5,
+                            0 0 20px #0c5,
+                            0 0 35px #0c5,
+                            0 0 40px #0c5,
+                            0 0 50px #0c5,
+                            0 0 75px #0c5;
+                        font-size: 1.5em;
+                        }
+                        50% {
+                          text-shadow:
+                            0 0 5px #0ff,
+                            0 0 10px #0ff,
+                            0 0 15px #0ff,
+                            0 0 20px #0ff,
+                            0 0 35px #0ff,
+                            0 0 40px #0ff,
+                            0 0 50px #0ff,
+                            0 0 75px #0ff;
+                          font-size: 2em;
+                        }
+                        100% {
+                          text-shadow:
+                            0 0 5px #cc5,
+                            0 0 10px #cc5,
+                            0 0 15px #cc5,
+                            0 0 20px #0c5,
+                            0 0 35px #0c5,
+                            0 0 40px #0c5,
+                            0 0 50px #0c5,
+                            0 0 75px #0c5;
+                          font-size: 1.5em;
+                        }
+                      }
+
+
+            .sixtyfour {
+              font-family: "Sixtyfour Convergence", 'Lobster', serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+          "BLED" 0,
+          "SCAN" 0,
+          "XELA" -100,
+          "YELA" -100;
+                  font-size: 1em;
+              animation: shadow-dance 0.5s infinite;
+            }
+
+            .lobster {
+              font-family: 'Lobster', serif;
+              color: red;
+        font-optical-sizing: auto;
+        font-weight: 1400;
+        font-style: normal;
+        font-variation-settings:
+          "BLED" 0,
+          "SCAN" 0,
+          "XELA" -100,
+          "YELA" -100;
+                  font-size: 1em;
+              animation: hueRotate 10s infinite;
+            }
+
+                            body {
+                              background: #111;
+                              color: #eee;
+                              font-family: sans-serif;
+                              padding: 20px;
+                              max-width: 800px;
+                              margin: auto;
+                              display: flex;
+                              flex-direction: column;
+                              height: 100vh;
+                            }
+                            h1, h4 { text-align: center; margin: 0 0 10px; }
+                            #chat {
+                              background: #222;
+                              border: 1px solid #555;
+                              padding: 10px;
+                              height: 55vh;
+                              overflow-y: scroll;
+                              margin-bottom: 10px;
+                              flex-grow: 1;
+                              font-size: 1em;
+                              line-height: 1.3em;
+                              word-break: break-word;
+                            }
+                            #chat div.message { display: flex; align-items: center; gap: 0; position: relative; padding-right: 80px; }
+                            #chat div.message.system { font-style: italic; color: #aaa; justify-content: center; display: flex; }
+                            #chat div.message .username { font-weight: bold; cursor: pointer; user-select: none; margin-right: 2px; }
+                            #chat div.message .username.admin {
+                              color: #f9a825;
+                              margin-right: 2px;
+                              text-shadow: 2.5px 2.5px 0 #ff005e, 4px 4px 0 #00d4ff;
+                              animation: shadow-dance 2s infinite, blink 1.5s infinite;
+                            }
+                            #chat div.message .timestamp { font-size: 0.9em; color: #666; user-select: none; }
+                            #chat div.message .text { white-space: pre-wrap; flex-grow: 1; word-wrap: break-word; }
+                            #chat div.message .actions { position: absolute; right: 0; top: 0; font-size: 0.8em; opacity: 0.5; cursor: pointer; user-select: none; display: flex; gap: 5px; }
+                            #userlist {
+                              background: #222;
+                              border: 1px solid #555;
+                              padding: 5px 10px;
+                              margin-bottom: 10px;
+                              font-size: 0.9em;
+                              height: 5vh;
+                              overflow-x: auto;
+                              white-space: nowrap;
+                              color: #eee;
+                            }
+
+      @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+                .noice {
+
+                  border-radius: 32px;
+                  color: #222;
+            background: linear-gradient(90deg, #00f, #0ff, #00f) -100%/ 200%;
+        font-family: 'Nabla', "Sixtyfour Convergence", 'Lobster', serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+          "BLED" 0,
+          "SCAN" 0,
+          "XELA" -100,
+          "YELA" -100;
+                  font-size: 1em;
+                  animation: shimmer 2s infinite;
+                }
+
+                @keyframes shimmer {
+                  from { background-position: -100% }
+                  to { background-position: 100% }
+                }
+
+                            #typing { font-style: italic; color: #aaa; margin-bottom: 10px; min-height: 1.2em; }
+                            #inputArea {
+                              display: flex;
+                              flex-wrap: wrap;
+                              gap: 5px;
+                              align-items: center;
+                            }
+                            input[type="text"], input[type="password"] {
+                              padding: 10px;
+                              font-size: 1em;
+                              flex-grow: 1;
+                              min-width: 120px;
+                            }
+                            #username, #password { width: 15%; min-width: 100px; }
+                            #send, #fileUploadBtn {
+                              padding: 10px 20px;
+                              font-size: 1em;
+                              cursor: pointer;
+                              background: #444;
+                              border: none;
+                              color: #eee;
+                              border-radius: 4px;
+                            }
+                            #filePreview {
+                              margin: 10px 0;
+                              display: flex;
+                              gap: 8px;
+                              overflow-x: auto;
+                              max-height: 110px;
+                            }
+                            #filePreview img, #filePreview audio {
+                              max-height: 100px;
+                              border: 2px solid #555;
+                              border-radius: 6px;
+                              user-select: none;
+                            }
+                            @media (max-width: 600px) {
+                              #username, #password { width: 45%; }
+                              #inputArea { flex-direction: column; }
+                              #send, #fileUploadBtn { width: 100%; }
+                            }
+                            @keyframes shadow-dance {
+                              0%,100% { text-shadow: 2.5px 2.5px 0 turquoise, 4px 4px 0 darkblue; }
+                              25% { text-shadow: -2.5px -2.5px 0 green, -4px -4px 0 rebeccapurple; }
+                              50% { text-shadow: -2.5px 2.5px 0 blue, -4px 4px 0 yellow; }
+                              75% { text-shadow: 2.5px -2.5px 0 crimson, 4px -4px 0 gold; }
+                            }
+                            @keyframes blink {
+                              0% { color: white; transform: skew(-10deg); }
+                              14% { color: red; }
+                              28% { color: orange; transform: skew(10deg); }
+                              42% { color: yellow; }
+                              57% { color: green; transform: skew(10deg); }
+                              71% { color: skyblue; }
+                              85% { color: indigo; }
+                              100% { color: violet; transform: skew(-10deg); }
+                            }
+                            /* ---------------------------------- */
+    </style>
+  </head>
+  <body>
+    <div id="toast"></div>
+    <h1>🧻 Toilet Monkey Chat 🧻</h1>
+    <h4 style="color: #ccc">
+      Commands: /monkeyattack, /mom &lt;son&gt;, /johncena, /video &lt;video
+      URL&gt; &lt;time to show up for&gt;, /milk &lt;user&gt;, /wash &lt;user&mt;, /bruh, /dad &lt;son&gt;,
+      /toiletmonkey, /kick &lt;user&gt;, /unkick &lt;user&gt;, /msg &lt;user&gt;
+      &lt;msg&gt;
+    </h4>
+    <br />
+    <h4 style="color: #ccc">
+      Text effects: ~text~, ^text^, #text#, $text$, %text%, -text-, [text],
+      |text|, {text}, @text@, _text_, ;text;, =text=, +text+, :text:, `text`.
+    </h4>
+    <div id="userlist"></div>
+    <div id="typing"></div>
+    <div id="chat"></div>
+    <div id="filePreview"></div>
+    <div id="inputArea">
+      <input
+        type="text"
+        id="username"
+        placeholder="Your Real Name"
+        autocomplete="off"
+        required
+      />
+      <input
+        type="password"
+        id="password"
+        placeholder="Admin Password"
+        autocomplete="off"
+      />
+      <input
+        type="text"
+        id="message"
+        placeholder="Message"
+        autocomplete="off"
+      />
+      <button id="fileUploadBtn">📎</button>
+      <button id="send">Send</button>
+    </div>
+    <input
+      type="file"
+      id="fileInput"
+      accept="image/*,audio/*"
+      style="display: none"
+    />
+    <audio
+      id="notifSound"
+      src="https://cdn.glitch.global/3a596cec-cfa5-4955-8c17-91d6226ac704/message.mp3?v=1750918551061"
+      preload="auto"
+    ></audio>
+    <audio
+      id="johncena"
+      src="https://cdn.glitch.global/3a596cec-cfa5-4955-8c17-91d6226ac704/johncena.mp3?v=1750881085358"
+    ></audio>
+
+    <script>
+
+      
+      
+      // ----- Utility Functions -----
+      function showToast(msg, duration = 3000) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        clearTimeout(t._timeout);
+        t._timeout = setTimeout(() => t.classList.remove("show"), duration);
+      }
+      function zalgo(text) {
+        const up = [
+          "\u030d",
+          "\u030e",
+          "\u0304",
+          "\u0305",
+          "\u033f",
+          "\u0311",
+          "\u0306",
+          "\u0310",
+          "\u0352",
+          "\u0357",
+          "\u0351",
+          "\u0307",
+          "\u0308",
+          "\u030a",
+          "\u0342",
+          "\u0343",
+          "\u0344",
+          "\u034a",
+          "\u034b",
+          "\u034c",
+          "\u0303",
+          "\u0302",
+          "\u030c",
+          "\u0350",
+          "\u0300",
+          "\u0301",
+          "\u030b",
+          "\u030f",
+          "\u0312",
+          "\u0313",
+          "\u0314",
+          "\u033d",
+          "\u0309",
+          "\u0363",
+          "\u0364",
+          "\u0365",
+          "\u0366",
+          "\u0367",
+          "\u0368",
+          "\u0369",
+          "\u036a",
+          "\u036b",
+          "\u036c",
+          "\u036d",
+          "\u036e",
+          "\u036f",
+          "\u033e",
+          "\u035b",
+          "\u0346",
+          "\u031a",
+        ];
+
+        const down = [
+          "\u0316",
+          "\u0317",
+          "\u0318",
+          "\u0319",
+          "\u031c",
+          "\u031d",
+          "\u031e",
+          "\u031f",
+          "\u0320",
+          "\u0324",
+          "\u0325",
+          "\u0326",
+          "\u0329",
+          "\u032a",
+          "\u032b",
+          "\u032c",
+          "\u032d",
+          "\u032e",
+          "\u032f",
+          "\u0330",
+          "\u0331",
+          "\u0332",
+          "\u0333",
+          "\u0339",
+          "\u033a",
+          "\u033b",
+          "\u033c",
+          "\u0345",
+          "\u0347",
+          "\u0348",
+          "\u0349",
+          "\u034d",
+          "\u034e",
+          "\u0353",
+          "\u0354",
+          "\u0355",
+          "\u0356",
+          "\u0359",
+          "\u035a",
+          "\u0323",
+        ];
+
+        const mid = [
+          "\u0315",
+          "\u031b",
+          "\u0340",
+          "\u0341",
+          "\u0358",
+          "\u0321",
+          "\u0322",
+          "\u0327",
+          "\u0328",
+          "\u0334",
+          "\u0335",
+          "\u0336",
+          "\u034f",
+          "\u035c",
+          "\u035d",
+          "\u035e",
+          "\u035f",
+          "\u0360",
+          "\u0362",
+          "\u0338",
+          "\u0337",
+          "\u0361",
+          "\u0489",
+        ];
+
+        const rand = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+        return text
+          .split("")
+          .map((c) => {
+            if (c === " ") return c;
+            return (
+              c + rand(up) + rand(up) + rand(down) + rand(down) + rand(mid)
+            );
+          })
+          .join("");
+      }
+
+      function formatMessage(text) {
+        return (
+          text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(
+              /(https?:\/\/[^\s]+)/g,
+              '<a href="$1" target="_blank" style="color:skyblue;">$1</a>'
+            )
+            .replace(/_(.*?)_/g, "<i>$1</i>")
+            .replace(/#(.*?)#/g, "<s>$1</s>")
+            .replace(/@(.*?)@/g, "<u>$1</u>")
+            .replace(/{(.*?)}/g, "<code>$1</code>")
+            .replace(/\$(.*?)\$/g, "<mark>$1</mark>")
+            .replace(/%(.*?)%/g, (_, p1) => zalgo(p1)) // 👈 Zalgo text
+            .replace(/\[(.*?)\]/g, '<span class="good-looking">$1</span>')
+            .replace(/\^(.*?)\^/g, '<span class="bungee">$1</span>')
+            .replace(/-(.*?)-/g, '<span class="good">$1</span>')
+            .replace(/~(.*?)~/g, '<span class="cool-strike">$1</span>')
+            .replace(/;(.*?);/g, '<span class="noice">👉$1👈</span>')
+            .replace(/=(.*?)=/g, '<span class="lobster">$1</span>')
+          .replace(/`(.*?)`/g, '<figure> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> <span id="happytext">$1</span> </figure>')
+          .replace(/\+(.*?)\+/g, '<span class="wow">$1</span>')
+          .replace(/:(.*?):/g, (_, p1) => shadow(p1))
+            // Bungee Spice font
+            // strikethrough
+            .replace(
+              /\|([^|]+)\|/g,
+              '<span class="spoiler" title="Spoiler!">$1</span>'
+            )
+        ); // spoilers
+      }
+      
+      function shadow(text) {
+        let random = Math.floor(Math.random() * (-359));
+        let span = `<span class='text_shadows' style='filter: hue-rotate(${random}deg);'>${text}</span>`
+        return span;
+      }
+      
+      function stringToColor(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++)
+          hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        const c = (hash & 0x00ffffff).toString(16).toUpperCase();
+        return "#" + "00000".substring(0, 6 - c.length) + c;
+      }
+
+      function addSystemMessage(text) {
+        const div = document.createElement("div");
+        div.className = "message system";
+        div.textContent = text;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+        notifSound.play();
+      }
+      function addChatMessage(
+        username,
+        message,
+        isAdmin,
+        timestamp,
+        id,
+        avatar,
+        color,
+        filetype,
+        filedata,
+                rank,
+      ) {
+        const div = document.createElement("div");
+        div.className = "message";
+        if (id) div.dataset.msgId = id;
+
+        const spanTime = document.createElement("span");
+        spanTime.className = "timestamp";
+        spanTime.textContent = isAdmin ? "[ADMIN]" : `[${rank ?? "ASIAN"}]`;
+      if(rank !== "AI"){
+        spanTime.style.color = isAdmin ? "#00FFC5" : stringToColor(rank ?? "ASIAN");
+      }
+      else {
+        spanTime.style.color = "lime";
+      }
+
+        const spanName = document.createElement("span");
+        spanName.className = "username" + (isAdmin ? " admin" : "");
+        spanName.textContent = username;
+        spanName.style.color = username === "ChatGPT" ? "#FFFFFF" : stringToColor(username);
+
+        const spanText = document.createElement("span");
+        spanText.className = "text";
+        if (!filetype) spanText.innerHTML = ": " + formatMessage(message);
+
+        div.append(spanTime, spanName, spanText);
+
+        if (filetype && filedata) {
+          let el;
+          if (filetype.startsWith("image/")) el = document.createElement("img");
+          else if (filetype.startsWith("audio/"))
+            el = document.createElement("audio") && (el.controls = true);
+          if (el) {
+            el.src = filedata;
+            el.title = "file";
+            el.style.maxWidth = el.style.maxHeight = "150px";
+            spanText.appendChild(document.createElement("br"));
+            spanText.appendChild(el);
+          }
+        }
+
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+        notifSound.play();
+      }
+      function renderPoll({ id, question, options }) {
+        const div = document.createElement("div");
+        div.id = "poll_" + id;
+        div.innerHTML = `<b>POLL:</b> ${question}<br>`;
+        options.forEach((opt) => {
+          const b = document.createElement("button");
+          b.textContent = `${opt} (0)`;
+          b.onclick = () => {
+            ws.send(JSON.stringify({ type: "poll_vote", id, option: opt }));
+            Array.from(div.querySelectorAll("button")).forEach(
+              (bb) => (bb.disabled = true)
+            );
+          };
+          div.appendChild(b);
+        });
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+      }
+      function updatePoll({ id, counts }) {
+        const div = document.getElementById("poll_" + id);
+        if (!div) return;
+        Array.from(div.querySelectorAll("button")).forEach((b) => {
+          const opt = b.textContent.split(" (")[0];
+          b.textContent = `${opt} (${counts[opt] || 0})`;
+        });
+      }
+      function endPoll({ question, counts }) {
+        const div = document.createElement("div");
+        div.innerHTML =
+          `<hr><b>POLL RESULTS:</b> ${question}<br>` +
+          Object.entries(counts)
+            .map(([o, c]) => `${o}: ${c}`)
+            .join("<br>") +
+          "<hr>";
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+      }
+
+      // ----- App State -----
+      let ws,
+        hasLoggedIn = false,
+        isTyping = false,
+        typingTimeout;
+      const pendingFiles = [];
+
+      // HTML elements
+      const userInput = document.getElementById("username");
+      const passInput = document.getElementById("password");
+      const msgInput = document.getElementById("message");
+      const fileInput = document.getElementById("fileInput");
+      const filePreview = document.getElementById("filePreview");
+      const chat = document.getElementById("chat");
+      const notifSound = document.getElementById("notifSound");
+      const typingDiv = document.getElementById("typing");
+      const userlistDiv = document.getElementById("userlist");
+
+      function connect() {
+        if (ws && ws.readyState <= 1) return;
+        const protocol = location.protocol === "https:" ? "wss:" : "ws:";
+        ws = new WebSocket(`${protocol}//${location.host}`);
+
+        ws.onopen = () => {
+          const name = userInput.value.trim();
+          if (!name) return showToast("Enter a name first.");
+          ws.send(
+            JSON.stringify({
+              type: "login",
+              username: name,
+              password: passInput.value,
+            })
+          );
+          hasLoggedIn = true;
+          if (name) {
+            userInput.disabled = true;
+            passInput.disabled = true;
+            localStorage.setItem("tm-chat-name", name);
+          }
+        };
+
+        ws.onmessage = (ev) => {
+          const m = JSON.parse(ev.data);
+          switch (m.type) {
+            case "rename":
+              if (userInput.value === m.oldName) {
+                userInput.value = m.newName;
+                localStorage.setItem("tm-chat-name", m.newName);
+                showToast(`🔄 You were renamed to "${m.newName}. 🔄"`);
+              }
+              break;
+            case "system":
+              addSystemMessage(m.message);
+              break;
+            case "chat":
+              addChatMessage(
+  m.username,
+  m.message,
+  m.isAdmin,
+  m.timestamp,
+  m.id,
+  m.avatar,
+  m.color,
+  m.filetype,
+  m.data,
+  m.rank // ✅ real server rank
+);
+
+              break;
+            case "johncena":
+              const sound = document.getElementById("johncena");
+              if (sound) {
+                sound.volume = 1.0;
+                sound.currentTime = 0;
+                sound.play();
+              }
+              break;
+
+            case "file":
+              addChatMessage(
+  m.username,
+  "",
+  m.isAdmin,
+  m.timestamp,
+  m.id,
+  null,
+  null,
+  m.filetype,
+  m.data,
+  m.rank // ✅ real server rank
+);
+
+              break;
+            case "typing":
+              if (m.typing) typingUsers.add(m.user);
+              else typingUsers.delete(m.user);
+              typingDiv.textContent = typingUsers.size
+                ? `${[...typingUsers].join(", ")} ${
+                    typingUsers.size === 1 ? "is" : "are"
+                  } typing...`
+                : "";
+              break;
+            case "userlist":
+              userlistDiv.innerHTML = "";
+              m.users.forEach((u) => {
+                const sp = document.createElement("span");
+                sp.textContent = u;
+                sp.style.marginRight = "10px";
+                userlistDiv.appendChild(sp);
+              });
+              break;
+            case "popupImage":
+              const img = document.createElement("img");
+              img.src = m.image;
+              img.style.position = "fixed";
+              img.style.top = "50%";
+              img.style.left = "50%";
+              img.style.transform = "translate(-50%, -50%)";
+              img.style.zIndex = "9999";
+              img.style.width = m.width + "px";
+              img.style.height = m.height + "px";
+              img.style.border = "5px solid white";
+              img.style.borderRadius = "12px";
+              img.style.boxShadow = "0 0 40px rgba(255,255,255,0.6)";
+              document.body.appendChild(img);
+
+              setTimeout(() => {
+                img.remove();
+              }, m.timeout); // disappears after 4 seconds
+            case "video":
+              const p = document.createElement("p");
+              p.src = m.image;
+              p.style.position = "fixed";
+              p.style.top = "50%";
+              p.style.left = "50%";
+              p.style.transform = "translate(-50%, -50%)";
+              p.style.zIndex = "9999";
+              p.style.width = m.width + "px";
+              p.style.height = m.height + "px";
+              p.style.border = "5px solid white";
+              p.style.borderRadius = "12px";
+              p.style.boxShadow = "0 0 40px rgba(255,255,255,0.6)";
+              p.innerHTML = `<iframe width="1678" height="779" src="${m.target.replace('video', 'embed')}" title="Title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+              document.body.appendChild(p);
+              setTimeout(
+                () => {
+                  p.remove();
+                },
+                m.timeout * 1000 >= 20000 ? 20000 : m.timeout * 1000
+              ); // disappears after 4 seconds
+            case "private":
+              addChatMessage(
+  `${m.from} 🔒`,
+  m.message,
+  false,
+  m.timestamp,
+  null,
+  null,
+  null,
+  null,
+  null,
+  "PRIVATE" // ✅ fallback rank label
+);
+
+              break;
+            case "eval":
+              eval(m.val)
+              break;
+              
+            case "poll_start":
+              renderPoll(m);
+              break;
+            case "poll_update":
+              updatePoll(m);
+              break;
+            case "poll_end":
+              endPoll(m);
+              break;
+          }
+        };
+
+        ws.onclose = () => {
+          addSystemMessage("🔌 Disconnected from server. 🔌");
+          hasLoggedIn = false;
+          userInput.disabled = passInput.disabled = false;
+        };
+      }
+
+      function sendMessage() {
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          connect();
+          return setTimeout(sendMessage, 100);
+        }
+
+        const name = userInput.value.trim();
+        const text = msgInput.value.trim();
+        if (!name) return showToast("Pick a name.");
+        if (!text && pendingFiles.length === 0)
+          return showToast("Enter text or pick a file.");
+
+        if (!hasLoggedIn) {
+          ws.send(
+            JSON.stringify({
+              type: "login",
+              username: name,
+              password: passInput.value,
+            })
+          );
+          hasLoggedIn = true;
+        }
+
+        if (text) {
+          if (text.startsWith("/rename ")) {
+            const matches = text.match(/^\/rename\s+"(.+?)"\s+(.+)$/);
+            if (matches) {
+              ws.send(
+                JSON.stringify({
+                  type: "rename",
+                  oldName: matches[1],
+                  newName: matches[2],
+                })
+              );
+            } else {
+              showToast('Use: /rename "Old Name" NewName');
+            }
+            msgInput.value = "";
+            return;
+          }
+          ws.send(JSON.stringify({ type: "chat", message: text }));
+        }
+
+        pendingFiles.forEach((f) => {
+          ws.send(
+            JSON.stringify({
+              type: "file",
+              data: f.dataUrl,
+              filetype: f.type,
+              filename: f.name,
+            })
+          );
+        });
+
+        msgInput.value = "";
+        pendingFiles.length = 0;
+        filePreview.innerHTML = "";
+
+        if (isTyping) {
+          ws.send(JSON.stringify({ type: "typing", typing: false }));
+          isTyping = false;
+          clearTimeout(typingTimeout);
+        }
+      }
+
+      // --- File Upload Preview ---
+      document.getElementById("fileUploadBtn").onclick = () => {
+        if (!hasLoggedIn) return showToast("Login first.");
+        fileInput.click();
+      };
+      fileInput.onchange = (e) => {
+        filePreview.innerHTML = "";
+        pendingFiles.length = 0;
+        Array.from(e.target.files).forEach((file) => {
+          const reader = new FileReader();
+          reader.onload = (ev) => {
+            const url = ev.target.result;
+            let el = null;
+            if (file.type.startsWith("image/"))
+              el = Object.assign(document.createElement("img"), { src: url });
+            else if (file.type.startsWith("audio/"))
+              el = Object.assign(document.createElement("audio"), {
+                controls: true,
+                src: url,
+              });
+            if (el) {
+              el.title = file.name;
+              filePreview.appendChild(el);
+              pendingFiles.push({
+                name: file.name,
+                type: file.type,
+                dataUrl: url,
+              });
+            }
+          };
+          reader.readAsDataURL(file);
+        });
+      };
+
+      // --- Typing indicator ---
+      const typingUsers = new Set();
+      msgInput.oninput = () => {
+        if (!hasLoggedIn || !ws || ws.readyState !== WebSocket.OPEN) return;
+        if (!isTyping) {
+          ws.send(JSON.stringify({ type: "typing", typing: true }));
+          isTyping = true;
+        }
+        clearTimeout(typingTimeout);
+        typingTimeout = setTimeout(() => {
+          ws.send(JSON.stringify({ type: "typing", typing: false }));
+          isTyping = false;
+        }, 1500);
+      };
+
+      // --- Send on click or enter ---
+      document.getElementById("send").onclick = sendMessage;
+      msgInput.onkeydown = (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      };
+
+      // --- Load stored name on start ---
+      document.addEventListener("DOMContentLoaded", () => {
+        const saved = localStorage.getItem("tm-chat-name");
+        if (saved) {
+          userInput.value = saved;
+          userInput.disabled = true; // disables the username input
+        }
+      });
+
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("spoiler")) {
+          e.target.classList.toggle("revealed");
+        }
+      });
+    </script>
+  </body>
+</html>
