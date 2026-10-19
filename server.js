@@ -63,66 +63,76 @@ function getRandomRank() {
   return ranks[Math.floor(Math.random() * ranks.length)];
 }
 //FREE OPENAI KEY
-const ENDPOINT = 'https://api.openai.com/v1/chat/completions';
+const ENDPOINT = 'https://integrate.api.nvidia.com/v1/chat/completions';
 
 async function createChatCompletion() {
-  if(lastChatMessage !== aiMessage) {
+  if (lastChatMessage === aiMessage) return;
+
   try {
     const response = await fetch(ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${API_KEY}`,
+        'Authorization': `Bearer ${NVIDIA_API_KEY}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
-        store: true,
+        model: 'meta/llama-3.2-3b-instruct',
         max_tokens: 40,
+        temperature: 1.2,
+        top_p: 0.9,
+        stream: false,
         messages: [
-  {
-  role: 'system',
-  content: "You are a mischievous demon monkey from a toilet. Reply in under 65 characters. Be weird, chaotic, and funny, but suprisingly helpful. Insult people."
-},
-  {
-    role: 'user',
-    content: lastChatMessage
-  }
-]
-
+          {
+            role: 'system',
+            content:
+              'You are Toilet Monkey, a mischievous demon monkey ' +
+              'from a toilet. Reply in UNDER 65 characters. ' +
+              'Be stupid, chaotic, weird, funny, and surprisingly ' +
+              'helpful. Lightly roast people. Never be boring. ' +
+              'Use short, absurd replies.'
+          },
+          {
+            role: 'user',
+            content: String(lastChatMessage)
+          }
+        ]
       })
     });
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error(`Error ${response.status}: ${response.statusText}`);
-      console.error(errorText);
+      throw new Error(
+        `NVIDIA API ${response.status}: ${errorText}`
+      );
     }
 
     const data = await response.json();
-    console.log('Response JSON:');
-    console.log(JSON.stringify(data, null, 2));
+    const message = data.choices?.[0]?.message?.content?.trim();
+
+    if (!message) {
+      throw new Error('NVIDIA returned an empty response');
+    }
+
     const timestamp = Date.now();
     const id = uuidv4();
-    aiMessage = data.choices[0].message.content;
-    lastChatMessage = data.choices[0].message.content;
-      broadcast({
-            type: "chat",
-            username: "🧻Toilet Monkey🧻",
-            message: data.choices[0].message.content,
-            isAdmin: false,
-            timestamp,
-            id,
-            rank: "LID DEMON",
-          });
+
+    aiMessage = message;
+    lastChatMessage = message;
+
+    broadcast({
+      type: 'chat',
+      username: '🧻Toilet Monkey🧻',
+      message,
+      isAdmin: false,
+      timestamp,
+      id,
+      rank: 'LID DEMON',
+    });
+
   } catch (err) {
-    console.error('Request failed:', err);
-  }
-  }
-  else {
-    return;
+    console.error('Toilet Monkey failed:', err);
   }
 }
-
 
 function applyEffect(username, message) {
   const effect = activeEffects.get(username);
